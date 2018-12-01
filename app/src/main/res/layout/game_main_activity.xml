@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#5C9FEE" >
+	<Button
+	    android:id="@+id/demoBtnRecharge"
+		style="@style/main_btn_textstyle"
+		android:text="充 值"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"/>
+    <Button
+	    android:id="@+id/demoBtnStartGame"
+		style="@style/main_btn_textstyle"
+		android:text="订单查询"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@id/demoBtnRecharge"/>
+    <Button
+	    android:id="@+id/demoBtnMyProps"
+		style="@style/main_btn_textstyle"
+		android:text="我的道具"
+		android:layout_alignParentLeft="true"
+	    android:layout_below="@id/demoBtnStartGame"/>
+    <Button
+	    android:id="@+id/demoBtnMyPause"
+		style="@style/main_btn_textstyle"
+		android:text="我的暂停"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@id/demoBtnMyProps"/>
+
+    <Button
+	    android:id="@+id/demoBtnExitGame"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/game_exit_btn_bg"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/demoBtnLogin"
+		style="@style/main_btn_textstyle"
+		android:text="登录"
+        android:layout_alignParentRight="true"
+	    android:layout_alignParentBottom="true"
+	    android:visibility="gone"/>
+    <Button
+        android:id="@+id/demoBtnModfiyPwd"
+		style="@style/main_btn_textstyle"
+		android:text="修改密码"
+        android:layout_alignParentRight="true"
+	    android:layout_alignParentBottom="true"
+	    android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/demoBtnSwitch"
+		style="@style/main_btn_textstyle"
+        android:layout_alignParentRight="true"
+	    android:layout_above="@id/demoBtnModfiyPwd"
+	    android:layout_marginBottom="10dp"
+		android:visibility="gone"
+        android:text="切换账号"/>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        minSdkVersion 4
+        targetSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.android.support:support-v4:23.+'
+//    compile files('libs/alipaySdk-20160809.jar')
+//    compile files('libs/async-httpclient-1.6.0.jar')
+//    compile files('libs/Baidu_Mobstat_Android_FOR_GAME_SDK_1.4.jar')
+//    compile files('libs/BDGame_Login_SDK_V4.1.0.jar')
+//    compile files('libs/commons-io-1.4.jar')
+//    compile files('libs/dk_game_sdk_1_1.jar')
+//    compile files('libs/dkdllib-1.0.jar')
+//    compile files('libs/galaxy-lite-2.0.0.jar')
+//    compile files('libs/httpclient-1.0.0.jar')
+//    compile files('libs/mid-sdk-3.73.jar')
+//    compile files('libs/mta-android-sdk-3.3.1.jar')
+//    compile files('libs/need_lib.jar')
+//    compile files('libs/pushservice-5.5.0.50.jar')
+//    compile files('libs/sapi-core-7.2.2.jar')
+//    compile files('libs/singlesdk3.1.2.jar')
+//    compile files('libs/sofire-sdk-3.1.0.jar')
+//    compile files('libs/universal-image-loader-1.9.2.jar')
+}

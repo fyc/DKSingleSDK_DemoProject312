@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "com.duoku.platform.demo.single"
+        minSdkVersion 5
+        targetSdkVersion 24
+        flavorDimensions "versionCode"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    productFlavors {
+        app1 {
+            applicationId "com.duoku.platform.demo.single1"
+            //代码中可通过BuildConfig.appid引用
+            buildConfigField("Boolean", 'isDebug', 'true')
+//            manifestPlaceholders = [APPPKGNAME : applicationId, ORIENTATION: "landscape", APPNAME:"华容道经典闯关",APPID:"10894876",APPKEY:"a71LjMedT2O3fM1xkfULPa2c"]
+            manifestPlaceholders = [APPPKGNAME : applicationId, ORIENTATION: "landscape", APPNAME:"横版单机3.1.2",APPID:"4110",APPKEY:"b80b8ecead42c8678537d282096df15c"]
+
+            buildConfigField("boolean", "isLandscape", "true")
+        }
+
+//        app2 {
+//            applicationId "com.duoku.platform.demo.single2"
+//            manifestPlaceholders = [APPPKGNAME : applicationId, ORIENTATION: "landscape", APPNAME:"2单机3.1.1",APPID:"4110",APPKEY:"b80b8ecead42c8678537d282096df15c"]
+//            buildConfigField('Boolean', 'isLandscape', 'true')
+//        }
+
+        app3 {
+            applicationId "com.duoku.platform.demo.single3"
+//            manifestPlaceholders = [APPPKGNAME : applicationId, ORIENTATION: "portrait", APPNAME:"3单机3.1.1",APPID:"50011",APPKEY:"OWNDEV_U6aNJVGasAOxskw8B"]
+            manifestPlaceholders = [APPPKGNAME : applicationId, ORIENTATION: "portrait", APPNAME:"竖版单机3.1.2",APPID:"4110",APPKEY:"b80b8ecead42c8678537d282096df15c"]
+            buildConfigField('Boolean', 'isLandscape', 'false')
+        }
+
+//        app4 {
+//            applicationId "com.duoku.platform.demo.single4"
+//            manifestPlaceholders = [APPPKGNAME : applicationId, ORIENTATION: "portrait", APPNAME:"4单机3.1.1",APPID:"9837618",APPKEY:"bgslKdcuONBSb3ZRyiR9SUlk"]
+//            buildConfigField('Boolean', 'isLandscape', 'false')
+//        }
+    }
+}
+
+dependencies {
+    implementation project(':dKSingleSDK_LibProject_312')
+}
